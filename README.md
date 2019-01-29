@@ -9,7 +9,7 @@ gitで管理するメインのファイルです。
 Mendeleyでは`control+E`でエクスポートします。DOIやISBNなど多くのジャーナルでは必要のないものも出力されるため、状況に応じで`grep -v`で整形すると良いでしょう。
 
 ## jasn.csl
-cslは[ここ](https://github.com/citation-style-language/styles/find/master)から検索できます。1000ファイル以上があるので検索がしにくいです。
+cslは[こちらのGitHub](https://github.com/citation-style-language/styles/find/master)から検索できます。
 今回は一例としてJASNのcslですが、目的のcslを保存しましょう。
 なお、デフォルトでは雑誌のフルネームでとても長いファイル名なので、省略したほうが使いやすいです。
 
