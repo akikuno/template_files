@@ -21,8 +21,8 @@ pandocのデフォルトの出力はcaribliなどを使っていて読みにく�
 
 文章のコンパイル
 ```bash
-input="test.md"
-output="output.docx"
+input="manuscript.md"
+output="manuscript.docx"
 bib="bib.bib"
 csl="jasn.csl"
 
