@@ -26,7 +26,7 @@ output="manuscript.docx"
 bib="bib.bib"
 csl="jasn.csl"
 
-pandoc --reference-docx=pandoc_style.docx \
+pandoc --reference-doc=pandoc_style.docx \
 --filter pandoc-citeproc \
 --variable papersize=a4paper  \
 --bibliography=${bib} --csl=${csl} \
