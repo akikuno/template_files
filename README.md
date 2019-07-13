@@ -19,7 +19,15 @@ pandocのデフォルトの出力はcaribliなどを使っていて読みにく�
 
 # コマンドについて
 
-文章のコンパイル
+## pandocのバージョン（2019-07-13確認）
+pandoc 2.2.3.2
+
+## 改ページ
+Pandocでdocxにする際に`\newpage`が反映されないため、外部コマンドをインストールします。
+`pip install git+https://github.com/pandocker/pandoc-docx-pagebreak-py`
+https://github.com/pandocker/pandoc-docx-pagebreak-py
+
+## 文章のコンパイル
 ```bash
 input="manuscript.md"
 output="manuscript.docx"
@@ -29,11 +37,12 @@ csl="jasn.csl"
 pandoc --reference-doc=pandoc_style.docx \
 --filter pandoc-citeproc \
 --variable papersize=a4paper  \
+--filter=pandoc-docx-pagebreakpy \
 --bibliography=${bib} --csl=${csl} \
 -s ${input} -o ${output}
 ```
 
-新しいdocxのテンプレートファイルを作りたい場合
+## 新しいdocxのテンプレートファイルを作りたい場合
 ```bash
 pandoc --print-default-data-file reference.docx > pandoc_style.docx
 ```
