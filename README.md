@@ -23,8 +23,8 @@ pandocのデフォルトの出力はcaribliなどを使っていて読みにく�
 pandoc 2.2.3.2
 
 ## 改ページ
-Pandocでdocxにする際に`\newpage`が反映されないため、外部コマンドをインストールします。
-`pip install git+https://github.com/pandocker/pandoc-docx-pagebreak-py`
+Pandocでdocxにする際に`\newpage`が反映されないため、外部コマンドをインストールします。  
+`pip install git+https://github.com/pandocker/pandoc-docx-pagebreak-py`  
 https://github.com/pandocker/pandoc-docx-pagebreak-py
 
 ## 文章のコンパイル
