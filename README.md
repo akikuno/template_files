@@ -27,6 +27,11 @@ Pandocでdocxにする際に`\newpage`が反映されないため、外部コマ
 `pip install git+https://github.com/pandocker/pandoc-docx-pagebreak-py`  
 https://github.com/pandocker/pandoc-docx-pagebreak-py
 
+## 表について
+現状、Pandocはmultiline tablesやgrid tableのみ対応しています。  
+テーブルのフォーマットには下記のVS codeの拡張機能が便利です。  
+https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatt
+
 ## 文章のコンパイル
 ```bash
 input="manuscript.md"
