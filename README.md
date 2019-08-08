@@ -29,8 +29,9 @@ https://github.com/pandocker/pandoc-docx-pagebreak-py
 
 ## 表について
 現状、Pandocはmultiline tablesやgrid tableのみ対応しています。  
-テーブルのフォーマットには下記のVS codeの拡張機能が便利です。  
-https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatt
+テーブルのフォーマットには下記のVS codeの拡張機能が便利です。 
+`Table Formatter`
+https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter
 
 ## 文章のコンパイル
 ```bash
