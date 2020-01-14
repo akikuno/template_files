@@ -8,13 +8,12 @@
 Mendeleyでは`control+E`でエクスポートします。DOIやISBNなど多くのジャーナルでは必要のないものも出力されるため、状況に応じで`grep -v`で整形すると良いでしょう。
 
 ## jasn.csl
-cslは[こちらのGitHub](https://github.com/citation-style-language/styles/find/master)から検索できます。
+cslは[こちらのGitHubリポジトリ](https://github.com/citation-style-language/styles/find/master)から検索できます。
 今回は一例としてJASNのcslですが、目的のcslを保存しましょう。
-なお、デフォルトでは雑誌のフルネームでとても長いファイル名なので、省略したほうが使いやすいです。
+なお、デフォルトのファイル名は雑誌のフルネームでとても長いので、省略したほうが使いやすいです。
 
 ## pandoc_style.docx
 pandocのデフォルトの出力はcaribliなどを使っていて読みにくいので、スタイルを整えたテンプレートファイルです。
-好き嫌いの少ないシンプルなスタイルになっています。
 
 # コマンドについて
 
