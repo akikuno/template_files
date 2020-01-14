@@ -3,7 +3,6 @@
 # ファイルについて
 ## manuscript.md
 [Pandoc拡張Markdown記法](http://sky-y.github.io/site-pandoc-jp/users-guide/)で執筆します。
-gitで管理するメインのファイルです。
 
 ## bib.bib
 Mendeleyでは`control+E`でエクスポートします。DOIやISBNなど多くのジャーナルでは必要のないものも出力されるため、状況に応じで`grep -v`で整形すると良いでしょう。
