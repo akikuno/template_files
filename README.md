@@ -17,36 +17,49 @@ pandocのデフォルトの出力はcaribliなどを使っていて読みにく�
 
 # コマンドについて
 
-## pandocのバージョン（2019-07-13確認）
-pandoc 2.2.3.2
+## pandocのバージョン
+
+- pandoc 2.10.1 (2020-09-16 確認)
+- pandoc 2.2.3.2 (2019-07-13 確認)
 
 ## 改ページ
+
 Pandocでdocxにする際に`\newpage`が反映されないため、外部コマンドをインストールします。  
-`pip install git+https://github.com/pandocker/pandoc-docx-pagebreak-py`  
+```sh
+type pandoc-docx-pagebreakpy 1> /dev/null ||
+pip3 install git+https://github.com/pandocker/pandoc-docx-pagebreak-py
+```
 https://github.com/pandocker/pandoc-docx-pagebreak-py
 
 ## 表について
+
 現状、Pandocはmultiline tablesやgrid tableのみ対応しています。  
 テーブルのフォーマットには下記のVS codeの拡張機能が便利です。  
 `Table Formatter`  
 https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter
 
 ## 文章のコンパイル
+
 ```bash
 input="manuscript.md"
 output="manuscript.docx"
 bib="bib.bib"
 csl="jasn.csl"
 
-pandoc --reference-doc=pandoc_style.docx \
---filter pandoc-citeproc \
---variable papersize=a4paper  \
---filter=pandoc-docx-pagebreakpy \
---bibliography=${bib} --csl=${csl} \
--s ${input} -o ${output}
+pandoc -f markdown+emoji \
+  --reference-doc=pandoc_style.docx \
+  --filter pandoc-citeproc \
+  --variable papersize=a4paper  \
+  --filter=pandoc-docx-pagebreakpy \
+  --bibliography=${bib} --csl=${csl} \
+  -s ${input} -o ${output} 2>&1 |
+grep -v "Page Break"
 ```
 
 ## 新しいdocxのテンプレートファイルを作りたい場合
+
+以下の`pandoc_style.docx`のスタイルをマニュアルで変更します。
+
 ```bash
 pandoc --print-default-data-file reference.docx > pandoc_style.docx
 ```
