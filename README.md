@@ -6,15 +6,15 @@
 
 [Pandoc拡張Markdown記法](http://sky-y.github.io/site-pandoc-jp/users-guide/)で執筆します. 
 
-## bib.bib
+## Bib
 
 Mendeleyでは`control+E`でエクスポートします.   
 chrome拡張機能の[BibItNow!](https://chrome.google.com/webstore/detail/bibitnow/bmnfikjlonhkoojjfddnlbinkkapmldg)もお薦めです.  
 
-## jasn.csl
+## Citation Style Language (CSL)
 
-cslは[こちらのGitHubリポジトリ](https://github.com/citation-style-language/styles/find/master)から検索できます. 
-今回は一例としてJASNのcslですが、目的のcslを保存しましょう. 
+cslは[こちらのGitHubリポジトリ](https://github.com/citation-style-language/styles/find/master)から検索できます.  
+
 なお、デフォルトのファイル名は雑誌のフルネームでとても長いので、省略したほうが使いやすいです. 
 
 ## pandoc\_style.docx
@@ -25,6 +25,7 @@ pandocのデフォルトの出力はcaribliなどを使っていて読みにく�
 
 ## pandocのバージョン
 
+* pandoc 2.16 (2021-11-18 確認)
 * pandoc 2.10.1 (2020-09-16 確認)
 * pandoc 2.2.3.2 (2019-07-13 確認)
 
@@ -58,6 +59,10 @@ pandoc -f markdown+emoji \
   -s ${input} -o ${output} 2>&1 |
 grep -v "Page Break"
 ```
+
+## Bibtexからリファレンスの一覧だけを作りたいとき
+
+
 
 ## 新しいdocxのテンプレートファイルを作りたい場合
 
